@@ -1,8 +1,7 @@
+require_relative 'person'
 require_relative 'high_five'
 
-class Student
-  attr_reader :age, :phase
-  attr_accessor :name
+class Student < Person
   include High_five
 
   def initialize(options = {})
