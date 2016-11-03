@@ -1,4 +1,8 @@
+require_relative './teachable'
+
+
 class SeniorTeacher
+  include Teachable
   attr_reader :age, :salary, :phase, :performance_rating, :target_raise
   attr_accessor :name
 
