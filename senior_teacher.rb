@@ -1,4 +1,6 @@
-class SeniorTeacher
+require_relative 'teacher'
+
+class SeniorTeacher < Teacher
   attr_reader :age, :salary, :phase, :performance_rating, :target_raise
   attr_accessor :name
 
@@ -7,10 +9,6 @@ class SeniorTeacher
     @age = options.fetch(:age, 0)
     @name = options.fetch(:name, "")
     @target_raise = 1000
-  end
-
-  def offer_high_five
-    "High five!"
   end
 
   def set_phase(num)
