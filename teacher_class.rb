@@ -1,10 +1,10 @@
 
 Class Teacher
 
-
 attr_reader :age, :salary, :phase, :target_raise
   attr_accessor :name
 
+include Interable
 
   def set_phase(num)
     @phase = num
