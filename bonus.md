@@ -16,4 +16,6 @@ To allow for named arguments, greater extensibility, and flexibility to respond 
 
 4. What is the purpose of the private keyword in a class? What does it protect you from and why is that valuable?
 
+The private keyword is used to separate your class's public API that anyone can access, thereby creating a contract to maintain and keep those method stable, from your class's internal implementation, which is not accessible outside the class.
+
 5. Why are concepts like encapsulation, single responsibility, and abstraction important? Now that you've been programming for a while, have you seen any advantages for yourself, or can you imagine them in the future?
