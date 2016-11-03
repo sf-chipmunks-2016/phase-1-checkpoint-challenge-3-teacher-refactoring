@@ -1,21 +1,27 @@
-class SeniorTeacher
-  attr_reader :age, :salary, :phase, :performance_rating, :target_raise
-  attr_accessor :name
+require_relative 'teacher'
+require_relative 'praise'
 
-  def initialize(options={})
-    @phase = 3
-    @age = options.fetch(:age, 0)
-    @name = options.fetch(:name, "")
-    @target_raise = 1000
-  end
+class SeniorTeacher < Teacher
+  include Praisable
+  # attr_reader :age, :salary, :phase, :performance_rating, :target_raise
+  # attr_accessor :name
 
-  def offer_high_five
-    "High five!"
-  end
+  # def initialize(options={})
+  #   @phase = 3
+  #   @age = options.fetch(:age, 0)
+  #   @name = options.fetch(:name, "")
+  #   @target_raise = 1000
+  # end
 
+  # def offer_high_five
+  #   "High five!"
+  # end
+  # Praisable.offer_high_five
+  
   def set_phase(num)
-    @phase = num
-    "Cool, I've always wanted to teach phase #{num}!"
+    super
+    # @phase = num
+    # "Cool, I've always wanted to teach phase #{num}!"
   end
 
   def teach_stuff
@@ -27,12 +33,14 @@ class SeniorTeacher
   end
 
   def salary=(new_salary)
-    puts "This better be good!"
-    @salary = new_salary
+    super
+    # puts "This better be good!"
+    # @salary = new_salary
   end
 
   def receive_raise(raise)
-    @salary += raise
+    super
+    # @salary += raise
   end
 
   def set_performance_rating(rating)

@@ -1,4 +1,12 @@
+require_relative 'praise'
+
 class Student
+  include Praisable
+  # Here i want to only take from the super class these attributes.
+  # But I don't know how to do that
+
+  # super( attr_reader :age, :salary, :phase, :target_raise)
+
   attr_reader :age, :phase
   attr_accessor :name
 
@@ -8,9 +16,10 @@ class Student
     @name = options.fetch(:name, "")
   end
 
-  def offer_high_five
-    "High five!"
-  end
+  # def offer_high_five
+  #   "High five!"
+  # end
+  # Praisable.offer_high_five
 
   def set_phase(num)
     response = ""
