@@ -1,4 +1,4 @@
-require_relative 'teachingstaff'
+require_relative 'teaching_staff'
 require_relative 'highfive'
 
 class ApprenticeTeacher < TeachingStaff
