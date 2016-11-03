@@ -35,4 +35,5 @@ class SeniorTeacher < Teacher
   def lead_training_session
     puts "Hey newbie!  Here are some common pitfalls.  Don't fall in them!"
   end
+
 end
