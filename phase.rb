@@ -1,7 +1,6 @@
-require_relative 'person'
-
 module Phase
   def initialize(options = {})
+    
   end
 
   def set_phase(num)

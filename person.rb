@@ -1,7 +1,7 @@
 class Person
   attr_reader :age, :phase, :salary, :performance_rating, :target_raise
   attr_accessor :name
-
+  
   def initialize(options={})
     @phase = phase
     @age = options[:age]
