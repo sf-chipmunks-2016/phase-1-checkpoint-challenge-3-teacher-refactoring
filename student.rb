@@ -1,11 +1,13 @@
-class Student
+# require_relative 'campus_class'
+
+class Student 
   attr_reader :age, :phase
   attr_accessor :name
 
   def initialize(options = {})
-    @phase = 1
     @age = options.fetch(:age, 0)
     @name = options.fetch(:name, "")
+    @phase = 1
   end
 
   def offer_high_five
@@ -25,7 +27,7 @@ class Student
   end
 
   def learn_stuff
-    response = ""
+    response = ''
     response += "WHOA! I've never thought of it quite like that before. "
     response += "Now I feel like a genius!"
     response
