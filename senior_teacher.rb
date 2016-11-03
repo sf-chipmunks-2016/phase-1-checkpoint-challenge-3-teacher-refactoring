@@ -1,5 +1,9 @@
+require_relative 'high_five_and_phase_changeable'
+
 class SeniorTeacher
-  attr_reader :age, :salary, :phase, :performance_rating, :target_raise
+  include HighFiveAndPhaseChangeable
+
+  attr_reader :age, :salary, :performance_rating, :target_raise
   attr_accessor :name
 
   def initialize(options={})
@@ -9,12 +13,8 @@ class SeniorTeacher
     @target_raise = 1000
   end
 
-  def offer_high_five
-    "High five!"
-  end
-
   def set_phase(num)
-    @phase = num
+    super
     "Cool, I've always wanted to teach phase #{num}!"
   end
 
