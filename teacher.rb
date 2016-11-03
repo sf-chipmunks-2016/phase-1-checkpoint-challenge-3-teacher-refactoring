@@ -8,7 +8,7 @@ class Teacher < Person
   end
 
   def salary=(new_salary)
-    puts "This better be good!"
+    "This better be good!"
     @salary = new_salary
   end
 
