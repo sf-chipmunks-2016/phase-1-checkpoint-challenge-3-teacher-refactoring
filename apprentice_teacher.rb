@@ -4,6 +4,7 @@ class ApprenticeTeacher < Teacher
   def initialize(options={})
     super
     @target_raise = 800
+    @raise_performance_threshold = 80
   end
 
 
@@ -15,17 +16,7 @@ class ApprenticeTeacher < Teacher
     response
   end
 
-  def set_performance_rating(rating)
-    response = ""
-    if rating > 80
-      response = "Yay, I'm a great employee!"
-      receive_raise(@target_raise)
-    else
-      response += "Oh, well -- thanks to this actionable, specific, and kind "
-      response += "feedback, I'll do better next time."
-    end
-    response
-  end
+
 
   def attend_training_session
     puts "Whoa. I know ruby-fu"
