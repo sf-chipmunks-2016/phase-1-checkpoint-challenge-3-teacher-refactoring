@@ -1,13 +1,12 @@
-require_relative 'schoolmember'
 
-class SeniorTeacher < SchoolMember
-  attr_reader :age, :salary, :phase, :performance_rating, :target_raise
-  attr_accessor :name
+require_relative 'Teacher'
+
+class SeniorTeacher < Teacher
+  attr_reader :salary, :performance_rating, :target_raise
 
   def initialize(options={})
+    super
     @phase = 3
-    @age = options.fetch(:age, 0)
-    @name = options.fetch(:name, "")
     @target_raise = 1000
   end
 
@@ -18,20 +17,8 @@ class SeniorTeacher < SchoolMember
   end
 
   def teach_stuff
-    response = ""
-    response += "Listen, class, this is how everything works, fo SHO! "
-    response += "*drops flat-out insane knowledge bomb* "
-    response += "... You're welcome. *saunters away*"
-    response
-  end
-
-  def salary=(new_salary)
-    puts "This better be good!"
-    @salary = new_salary
-  end
-
-  def receive_raise(raise)
-    @salary += raise
+    super + " fo SHO!"  + " *saunters away*"
+    #this isn't quite right, adds it at the end istead of in between
   end
 
   def set_performance_rating(rating)
