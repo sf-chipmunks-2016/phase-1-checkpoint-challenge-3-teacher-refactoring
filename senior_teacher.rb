@@ -1,8 +1,6 @@
-require_relative 'person.rb'
 require_relative 'teachable.rb'
 
 class SeniorTeacher < Person
-
   include Teachable
 
   attr_reader :salary, :performance_rating, :target_raise

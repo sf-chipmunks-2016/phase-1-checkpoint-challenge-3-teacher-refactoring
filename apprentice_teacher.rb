@@ -1,16 +1,14 @@
-require_relative 'person.rb'
 require_relative 'teachable.rb'
 
 class ApprenticeTeacher < Person
-
   include Teachable
 
   attr_reader :salary, :target_raise
 
   def initialize(options={})
     super 
-    @target_raise = 800
     @phase = 3
+    @target_raise = 800
     @required_rating = 80
   end
 

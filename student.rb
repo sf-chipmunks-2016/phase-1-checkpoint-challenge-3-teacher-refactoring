@@ -1,7 +1,6 @@
 require_relative 'person.rb'
 
 class Student < Person
-
   def initialize(options = {})
     super 
     @phase = 1
