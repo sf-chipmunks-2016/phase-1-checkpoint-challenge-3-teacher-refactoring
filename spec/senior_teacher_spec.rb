@@ -1,3 +1,4 @@
+require_relative '../person.rb'
 require_relative '../senior_teacher'
 
 describe SeniorTeacher do
