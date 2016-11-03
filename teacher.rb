@@ -15,9 +15,9 @@ class Teacher
     "Cool, I've always wanted to teach phase #{num}!"
   end
 
-  def teach_stuff(type_of_bomb)
+  def teach_stuff(how_confident, type_of_bomb)
     response = ""
-    response += "Listen, class, this is how everything works. "
+    response += "Listen, class, this is how everything works#{how_confident} "
     response += "*drops #{type_of_bomb} knowledge bomb* "
     response += "... You're welcome."
     response

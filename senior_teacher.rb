@@ -11,10 +11,8 @@ class SeniorTeacher < Teacher
   end
 
   def teach_stuff
-    response = ""
-    response += "Listen, class, this is how everything works, fo SHO! "
-    response += "*drops flat-out insane knowledge bomb* "
-    response += "... You're welcome. *saunters away*"
+    response = super(", fo SHO!", "flat-out insane")
+    response += " *saunters away*"
     response
   end
 
