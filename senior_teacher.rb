@@ -11,13 +11,13 @@ class SeniorTeacher < Teacher
   end
 
 
-  def set_phase(num)
-    @phase = num
-    "Cool, I've always wanted to teach phase #{num}!"
-  end
-
   def teach_stuff
-    super + " fo SHO!"  + " *saunters away*"
+    response = ""
+    response += "Listen, class, this is how everything works, "
+    response += "fo SHO! "
+    response += "*drops flat-out insane knowledge bomb* "
+    response += "... You're welcome. "
+    response += "*saunters away*"
     #this isn't quite right, adds it at the end istead of in between
   end
 
