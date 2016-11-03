@@ -1,11 +1,9 @@
-require_relative 'person'
-class ApprenticeTeacher < Person
-  attr_reader :salary, :target_raise
+require_relative 'teacher'
+class ApprenticeTeacher < Teacher
 
   def initialize(options={})
     super
     @target_raise = 800
-    @phase = 3
   end
 
 
@@ -15,15 +13,6 @@ class ApprenticeTeacher < Person
     response += "*drops crazy knowledge bomb* "
     response += "... You're welcome."
     response
-  end
-
-  def salary=(new_salary)
-    puts "This better be good!"
-    @salary = new_salary
-  end
-
-  def receive_raise(raise)
-    @salary += raise
   end
 
   def set_performance_rating(rating)
