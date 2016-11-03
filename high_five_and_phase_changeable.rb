@@ -1,5 +1,6 @@
 module HighFiveAndPhaseChangeable
-	attr_reader :phase
+	attr_reader :phase, :age
+	attr_accessor :name
 
 	def offer_high_five
 		"High five!"

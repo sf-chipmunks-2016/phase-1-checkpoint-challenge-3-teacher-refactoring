@@ -3,8 +3,7 @@ require_relative 'high_five_and_phase_changeable'
 class ApprenticeTeacher
   include HighFiveAndPhaseChangeable
 
-  attr_reader :age, :salary, :target_raise
-  attr_accessor :name
+  attr_reader :salary, :target_raise
 
   def initialize(options={})
     @age = options.fetch(:age, 0)

@@ -3,8 +3,7 @@ require_relative 'high_five_and_phase_changeable'
 class SeniorTeacher
   include HighFiveAndPhaseChangeable
 
-  attr_reader :age, :salary, :performance_rating, :target_raise
-  attr_accessor :name
+  attr_reader :salary, :performance_rating, :target_raise
 
   def initialize(options={})
     @phase = 3

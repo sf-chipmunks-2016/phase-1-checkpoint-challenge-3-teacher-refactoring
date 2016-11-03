@@ -3,9 +3,6 @@ require_relative 'high_five_and_phase_changeable'
 class Student
   include HighFiveAndPhaseChangeable
 
-  attr_reader :age
-  attr_accessor :name
-
   def initialize(options = {})
     @phase = 1
     @age = options.fetch(:age, 0)
