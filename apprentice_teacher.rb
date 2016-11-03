@@ -7,7 +7,6 @@ class ApprenticeTeacher < Teacher
     @raise_performance_threshold = 80
   end
 
-
   def teach_stuff
     response = ""
     response += "Listen, class, this is how everything works. "
@@ -15,8 +14,6 @@ class ApprenticeTeacher < Teacher
     response += "... You're welcome."
     response
   end
-
-
 
   def attend_training_session
     puts "Whoa. I know ruby-fu"

@@ -1,12 +1,11 @@
 require_relative 'teacher'
 class SeniorTeacher < Teacher
 
-  attr_reader :performance_rating, :target_raise
+  attr_reader :performance_rating
 
   def initialize(options={})
     super
     @target_raise = 1000
-    @raise_performance_threshold = 90
   end
 
   def teach_stuff

@@ -5,7 +5,7 @@ class Teacher < Person
   def initialize(options={})
     super
     @phase = 3
-    @raise_performance_threshold = 0
+    @raise_performance_threshold = 90
   end
 
   def receive_raise(raise)
@@ -22,6 +22,11 @@ class Teacher < Person
       response += "feedback, I'll do better next time."
     end
     response
+  end
+
+  def set_phase(num)
+    @phase = num
+    "Cool, I've always wanted to teach phase #{num}!"
   end
 
   def salary=(new_salary)
