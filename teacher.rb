@@ -1,10 +1,7 @@
 require_relative 'person'
-require_relative 'high_five'
 
 class Teacher < Person
 	attr_reader :salary, :target_raise
- 
-	include High_five
 
 	def initialize(options={})
     	@age = options.fetch(:age, 0)

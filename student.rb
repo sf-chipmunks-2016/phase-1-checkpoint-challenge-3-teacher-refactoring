@@ -2,7 +2,6 @@ require_relative 'person'
 require_relative 'high_five'
 
 class Student < Person
-  include High_five
 
   def initialize(options = {})
     @phase = 1
