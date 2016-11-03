@@ -2,7 +2,7 @@
 Class Teacher
 
 attr_reader :age, :salary, :phase, :target_raise
-  attr_accessor :name
+attr_accessor :name
 
 include Interable
 

@@ -1,13 +1,14 @@
 require_relative 'teacher_class'
+require_relative 'interactable'
 
 class SeniorTeacher < Teacher
-  attr_reader  :performance_rating, 
 
+  include Interactable
+
+  attr_reader  :performance_rating
 
   def initialize(options={})
-    @phase = 3
-    @age = options.fetch(:age, 0)
-    @name = options.fetch(:name, "")
+    super
     @target_raise = 1000
   end
 

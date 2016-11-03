@@ -1,11 +1,13 @@
+require_relative 'teacher_class'
+require_relative 'interactable'
+
 class ApprenticeTeacher < Teacher
-  attr_accessor :name
+  
+  include Interactable
 
   def initialize(options={})
-    @age = options.fetch(:age, 0)
-    @name = options.fetch(:name, "")
+    super
     @target_raise = 800
-    @phase = 3
   end
 
   def teach_stuff
@@ -15,10 +17,6 @@ class ApprenticeTeacher < Teacher
     response += "... You're welcome."
     response
   end
-
- 
-
-  
 
   def set_performance_rating(rating)
     response = ""
@@ -35,4 +33,5 @@ class ApprenticeTeacher < Teacher
   def attend_training_session
     puts "Whoa. I know ruby-fu"
   end
+
 end
