@@ -1,10 +1,8 @@
 
-Class Teacher
+class Teacher
 
 attr_reader :age, :salary, :phase, :target_raise
 attr_accessor :name
-
-include Interable
 
 	def initialize(options={})
 		@age = options.fetch(:age, 0)
@@ -26,3 +24,5 @@ include Interable
     	@salary += raise
   	end
  end
+
+
