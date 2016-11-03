@@ -4,6 +4,7 @@ class Student < Person
 
   def initialize(options = {})
     super
+    @phase = 1
   end
 
   def set_phase(num)
@@ -26,7 +27,8 @@ class Student < Person
   end
 end
 
-student = Student.new(phase: 1, age: 20, name: "asdf")
-p student.offer_high_five
-p student.name
-p student.set_phase(2)
+# student = Student.new(phase: 1, age: 20, name: "asdf")
+# p student.offer_high_five
+# p student.name
+# p student.set_phase(2)
+# p student.learn_stuff

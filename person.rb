@@ -4,9 +4,9 @@ class Person
   attr_accessor :name
 
 	def initialize(options = {})
-		@name = options.fetch(:name)
-		@age = options.fetch(:age)
-		@phase = options.fetch(:phase)
+		@name = options[:name] ||= ""
+		@age = options[:age] ||= 0
+		# @phase = options.fetch(:phase)
 	end
 
 	def offer_high_five

@@ -1,45 +1,29 @@
-require_relative 'person'
+require_relative 'teacher'
 
-class ApprenticeTeacher < Person
-  attr_reader :salary, :target_raise
+class ApprenticeTeacher < Teacher
 
-  def initialize(options={})
+  def initialize(options = {})
     super
-    @target_raise = 800
-  end
-
-  def set_phase(num)
-    super
-    "Cool, I've always wanted to teach phase #{num}!"
   end
 
   def teach_stuff
-    response = ""
-    response += "Listen, class, this is how everything works. "
+    response = super
+    response += ". "
     response += "*drops crazy knowledge bomb* "
     response += "... You're welcome."
     response
   end
 
   def salary=(new_salary)
-    puts "This better be good!"
-    @salary = new_salary
+    super
   end
 
   def receive_raise(raise)
-    @salary += raise
+    super
   end
 
   def set_performance_rating(rating)
-    response = ""
-    if rating > 80
-      response = "Yay, I'm a great employee!"
-      receive_raise(@target_raise)
-    else
-      response += "Oh, well -- thanks to this actionable, specific, and kind "
-      response += "feedback, I'll do better next time."
-    end
-    response
+    super
   end
 
   def attend_training_session
@@ -47,6 +31,12 @@ class ApprenticeTeacher < Person
   end
 end
 
-apprentice = ApprenticeTeacher.new(name: "asdfasdf", phase: 2, age:30)
-p apprentice.offer_high_five
-p apprentice.name
+# apprentice = ApprenticeTeacher.new(name: "asdfasdf", phase: 2, age:30)
+# p apprentice.offer_high_five
+# p apprentice.name
+# p apprentice.set_phase(2)
+# p apprentice.salary=(0)
+# p apprentice.teach_stuff
+# p apprentice.set_performance_rating(60)
+# p apprentice.salary
+# p apprentice.teach_stuff
