@@ -1,4 +1,7 @@
+require 'details'
+
 class Student
+  include Details
   attr_reader :age, :phase
   attr_accessor :name
 
@@ -9,7 +12,7 @@ class Student
   end
 
   def offer_high_five
-    "High five!"
+    Details.offer_high_five
   end
 
   def set_phase(num)
