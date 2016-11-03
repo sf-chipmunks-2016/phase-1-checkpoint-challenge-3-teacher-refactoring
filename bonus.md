@@ -19,3 +19,5 @@ To allow for named arguments, greater extensibility, and flexibility to respond 
 The private keyword is used to separate your class's public API that anyone can access, thereby creating a contract to maintain and keep those method stable, from your class's internal implementation, which is not accessible outside the class.
 
 5. Why are concepts like encapsulation, single responsibility, and abstraction important? Now that you've been programming for a while, have you seen any advantages for yourself, or can you imagine them in the future?
+
+These concepts lead to better design (i.e. code organization) when creating programs that are receptive to change and better to maintain/test. SRP allows you to create classes and methods that do one thing really well and are more modular/extensible. 
