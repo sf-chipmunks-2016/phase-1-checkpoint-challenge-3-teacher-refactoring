@@ -5,6 +5,7 @@ class SeniorTeacher < School
   include Teachable
   
   attr_reader :salary, :performance_rating, :target_raise, :rating_criteria
+  
   def initialize(options={})
     super(age: 0, name: "")
     @phase = 3

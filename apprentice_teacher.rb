@@ -5,8 +5,7 @@ require_relative 'teachable'
 class ApprenticeTeacher < School
   include Teachable
 
-  attr_reader :age, :salary, :phase, :target_raise, :rating_criteria
-  attr_accessor :name
+  attr_reader :salary, :target_raise, :rating_criteria
 
   def initialize(options={})
     super(age: 0, name: "")
