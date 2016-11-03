@@ -15,6 +15,14 @@ attr_accessor :name
     	"Cool, I've always wanted to teach phase #{num}!"
   	end
 
+  	# def teach_stuff
+   #  response = ""
+   #  response += "Listen, class, this is how everything works"
+   #  response += "*drops "
+   #  response += "... You're welcome."
+   #  response
+  	# end
+
   	def salary=(new_salary)
    		puts "This better be good!"
     	@salary = new_salary
