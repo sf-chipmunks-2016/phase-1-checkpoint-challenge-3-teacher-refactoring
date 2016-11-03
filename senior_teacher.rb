@@ -20,6 +20,8 @@ class SeniorTeacher < Teacher
     response
   end
 
+  #Similar to apprentice_teacher but would require iterating in super since the 80 and 90 scores are different
+
   def set_performance_rating(rating)
     response = ""
     if rating > 90
