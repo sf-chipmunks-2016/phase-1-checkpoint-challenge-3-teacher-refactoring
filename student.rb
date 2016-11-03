@@ -1,17 +1,10 @@
-require_relative 'dbc_person'
+require_relative "./dbc_person"
 
 class Student < DBCPerson
-  attr_reader :age, :phase
-  attr_accessor :name
-
   def initialize(options = {})
     super
     @phase = 1
   end
-
-  # def offer_high_five
-  #   "High five!"
-  # end
 
   def set_phase(num)
     response = ""
@@ -21,7 +14,7 @@ class Student < DBCPerson
     else
       response = "Oooh, phase #{num}. I hope I'm ready!"
     end
-    @phase = num
+    super
     response
   end
 
