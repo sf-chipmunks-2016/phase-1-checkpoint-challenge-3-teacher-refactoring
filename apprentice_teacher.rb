@@ -2,7 +2,6 @@ require_relative 'teacher'
 require_relative 'high_five'
 
 class ApprenticeTeacher < Teacher
- 
 
   def initialize(options={})
     super
