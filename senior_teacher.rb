@@ -2,12 +2,10 @@ require_relative 'teacher'
 require_relative 'high_five'
 
 class SeniorTeacher < Teacher
-  include HighFiveable
   attr_reader :performance_rating
   
   def initialize(options={})
-    @age = options.fetch(:age, 0)
-    @name = options.fetch(:name, "")
+    super
     @phase = 3
     @target_raise = 1000
   end

@@ -2,11 +2,10 @@ require_relative 'teacher'
 require_relative 'high_five'
 
 class ApprenticeTeacher < Teacher
-  include HighFiveable
+ 
 
   def initialize(options={})
-    @age = options.fetch(:age, 0)
-    @name = options.fetch(:name, "")
+    super
     @phase = 3
     @target_raise = 800
   end
